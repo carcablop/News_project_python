@@ -1,0 +1,280 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body{
+	font-family: 'Roboto';
+	font-size:10pt;
+}
+* {
+  margin:  0;
+  padding: 0;
+}
+
+h1{
+	font-size:40px;
+}
+h2{
+	font-size:30px;
+}
+h3{
+	font-size:24px;
+}
+h6{
+	font-size:10px;
+	font-weight:normal;
+}
+a{
+	text-decoration:none;
+}
+
+li{
+	list-style:none;
+}
+
+.col-1 {
+	width:100%;
+	
+}
+.col-2 {
+	width:48%;
+	float:left;
+	padding:10px;
+}
+.col-3 {
+	width:30%;
+	float:left;
+	padding:10px;
+}
+
+.contenedor{
+	padding:90px 20px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	
+}
+
+p.mensaje {
+	padding: 15px;
+	border: 2px solid #b2dfdb;
+}
+
+form.formulario-puntuacion {
+	text-align: right;
+}
+form.formulario-puntuacion select{
+	width: 50px;
+	height: 27px;
+}
+form.formulario-puntuacion input[type='submit']{
+	height: 27px;
+	background-color: #006064;
+	color: #FFF;
+	border-style: none;
+	padding: 3px 10px;
+}
+
+#registro{
+	background-color:#f2f2f2;
+	height:100%;
+}
+
+#registro .nav{
+	background-color: #006064;
+	padding:15px 0px;
+	color:#fff;
+	text-align:center;
+}
+.registro {
+	margin-top:30px;
+}
+.registro form{
+	width:450px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+}
+.registro form label{
+	margin-top:15px;
+}
+.registro form input,.header .buscador form input{
+  width:100%;
+  padding:5px;
+  border-radius:5px;
+  border:1px solid #cccccc;
+  margin:5px 0;
+}
+
+
+.registro form select{
+	width: 100%;
+	margin: 10px 0;
+	border: 1px solid rgb(204, 204, 204);
+	border-radius: 5px;
+}
+.registro form select option{
+	padding:3px 5px;
+}
+.registro p{
+	width: 450px;
+	margin: 0 auto;
+}
+.registro a{
+	color: #3f51b5;
+}
+
+.header {
+	color:#fff;
+	background-color: #006064;
+}
+
+#home .header{
+	padding: 100px 200px;
+	margin:0 auto;
+	font-size:20px;
+}
+#home .header h1{
+	font-size:70px;
+}
+.header .botones{
+	margin-top: 30px;
+}
+
+#home .header a,form input[type="submit"]{
+	font-size: 16px;
+	text-decoration: none;
+	background-color: #F1F1F1;
+	border-color: transparent;
+	color: #1C79A6;
+	padding: 10px 16px;
+	border-radius:2px;
+}
+#home .header .botones span{
+	margin:0 10px;
+}
+
+
+.header .buscador form input{
+	float:left;
+	width:82%;
+	padding:12px;
+}
+	
+
+/*** Noticias ***/
+
+#noticias .header header{
+	padding:20px 100px 0;
+}
+
+
+#noticias .header img{
+	float:left;
+	width: 66px;
+	height: 44px;
+	margin-right:20px;
+}
+#noticias .header h1{
+	float:left;
+}
+
+#noticias .header nav{
+	text-align: right;
+	padding-top: 20px;
+	
+}
+#noticias .header a{
+	color:#fff;
+}
+#noticias .header .buscador,.filtro{
+	text-align:center;
+	background-color:#00838f;
+	padding:20px 150px;
+	margin-top:30px;
+}
+.filtro {
+	margin:0;
+}
+.filtro label{
+	font-size:20px;
+}
+.filtro select {
+	width:150px;
+	padding:5px;
+	margin:15px 50px 0 20px;
+}
+.filtro form input[type="submit"] {
+	padding: 3px 16px;
+}
+p.mensaje {
+	padding: 15px;
+	border: 2px solid #b2dfdb;
+}	
+#noticias .header .buscador form{
+	margin:15 auto;
+	height:96px;
+		
+}
+#noticias .header .buscador form input[type="submit"]{
+	width:180px;
+	margin-left:10px;
+	padding:10px;
+	
+}
+.noticias {
+	
+	margin:50px 150px;
+	
+}
+.noticias ul li{
+	border: 1px solid #DDD;
+	margin: 20px 0;
+	padding: 15px;
+	float:left;
+	width:90%;
+}
+li.float{
+
+	width:100%;
+}
+.noticias.internacionales h2{
+	text-align:center;
+	color: #006064;
+}
+.imagen.float{
+	float: left;
+	width: auto;
+	margin-right: 10px;
+}
+.imagen.float img{
+	max-width:250px;
+}
+
+/** Footer **/
+
+footer{
+	padding:20px;
+	background-color: #424242;
+	color:#fff;
+	
+}
+
+
+ul.errorlist {
+	list-style:none;
+	color:red;
+}

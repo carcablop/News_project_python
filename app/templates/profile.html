@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	{% block encabezado%}{% endblock %}
+	<meta charset="utf-8"/>
+	<title>Noticias</title>
+	<link rel='stylesheet' href='{{STATIC_URL}}css/base.css' type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="noticias">
+		{% include 'header.html' %}
+		
+		<div class="registro">
+		
+	     <form id="formulario" method="post">{% csrf_token %}
+		 		<label for="id_nombre">Nombre</label>
+		 		<input type="text" value="{{usuario.nombre}}" name="nombre" id="id_nombre"/>
+		 		<label for="id_email">Email</label>
+		 		<input type="email" value="{{usuario.email}}" name="email" id="id_email"/>
+		 		<label for="id_consetrana">Contrasena</label>
+		 		<input type="password" value="{{usuario.contrasena}}" name="contrasena" id="id_contrasena"/>
+		 		<label for="id_periodico">Periodicos favoritos: </label>
+		 		
+		 		{% for elemento in usuario.periodico.all %}
+		 		 {{elemento}} | 
+		 		{% endfor %}
+		 		{{formulario.periodico}}
+		 		<input type="submit" value="Guardar" />
+		 </form>
+		 
+		 
+		 
+		</div>
+		
+	</div>
+
+</body>
+
+</html>

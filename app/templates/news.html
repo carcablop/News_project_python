@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	{% block encabezado%}{% endblock %}
+	<meta charset="utf-8"/>
+	<title>Noticias</title>
+	<link rel='stylesheet' href='{{STATIC_URL}}css/base.css' type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="noticias">
+		{% include 'header.html' %}
+		
+		<div class="noticias">
+					
+					{% if periodicos.keys|length == 0  %}
+						<p class="mensaje">No hay resultados con la busqueda realizada</p>
+					{% endif %}
+						
+					 {% for key, value in periodicos.items %}
+					  
+					 	{% if periodicos.keys|length <= 1 %}
+					 		<div class="col-1">
+					 	{% elif periodicos.keys|length == 2 %}
+					 		<div class="col-2">
+					 	{% elif periodicos.keys|length == 3 %}
+					 		<div class="col-3">	
+					 	{% endif %}
+					
+							 		<h2>{{key}}</h2>
+							 		<ul>
+							 		{% for titulo , lista in value.items %}
+							 			<li {% if periodicos.keys|length == 1 %} class="float" {% endif %}>
+									 		{% if lista|last != "nada" %}
+									 		
+									 		<div class="imagen {% if periodicos.keys|length == 1 %} float {% endif %}">
+									 			<img src="{{ lista|last }}" width="100%"/>
+									 		</div>
+									 		{% endif %}
+									 		<div class="contenido">
+										 		<h4>{{ titulo}}</h4>
+										 		<p> {{ lista|slice:"1:2"|first }} </p>
+										 		<a href="{{ lista|first }}" target="_blank">Leer mas</a>
+									 		</div>
+									 	</li>
+									 	
+								 	{% endfor %}	
+								
+									</ul> 	
+					 		</div>
+					 {% endfor %}
+				
+			 
+		</div>
+		
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Nuevo usuario</title>
+	<link rel='stylesheet' href='{{STATIC_URL}}css/base.css' type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="registro">
+		
+		<div class="nav">
+			<h1> Registro de nuevo usuario</h1>
+		</div>		
+		<div class="registro">
+			<form id= 'formulario' method='post' action=''> {% csrf_token %}
+				{{formulario}}
+				<p><input type= 'submit' value='Registrar'/></p>
+			</form>
+			<p>Si ya estas registrado haz click <a href="http://127.0.0.1:8000/login/">aqui</a>
+		</div>
+		
+	</div>
+	
+	{% include 'footer.html' %}
+</body>
+</html>
+

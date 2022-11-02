@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Iniciar sesion</title>
+	<link rel='stylesheet' href='{{STATIC_URL}}css/base.css' type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	
+
+{% block contenido %}
+	<div id="registro">
+		<div class="nav">
+			<h1>Inicia sesion</h1>
+		</div>		
+		<div class="registro">
+		{% if msg %}
+ 			<p class="mensaje">{{msg}}</p>
+ 		{% endif %}
+			<form id='formulario' method= 'post' action= ''>{% csrf_token %}
+				<label>Nombre de usuario</label>{{formulario.nombre}}</table>
+				<label>Contrasena</label>{{formulario.contrasena}}</table>
+				<p><input type= 'submit' value= 'Ingresar'/></p>
+			</form> 
+			<p>Si no estas registrado haz click <a href="nuevo">aqui</a>
+		</div>
+		
+	</div>
+{% endblock %}
+
+{% include 'footer.html' %}
+
+</body>
+</html>

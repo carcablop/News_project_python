@@ -1,0 +1,38 @@
+<div class="header">	
+			<header>
+				<img src="{{STATIC_URL}}img/lo
+				go_big.png" height="80"/>
+				<h1><a href="http://127.0.0.1:8000/noticias">Noticias</a></h1>
+				<nav>
+					<a href="http://127.0.0.1:8000/perfil">{{usuario}}</a> | <a href="http://127.0.0.1:8000/logout">Cerrar Sesion</a></p>
+				</nav>
+			</header>
+			<div class="buscador">
+				<form method='post'>{% csrf_token %}
+					<input type="text" name="consulta" id="id_consulta" value="{{busqueda}}" placeholder="Escribe tu consulta"/>
+					<input type="submit" value="BUSCAR NOTICIA" />
+					<div class="filtro">
+						<label>Periodico</label>
+						<select name="filtro_periodicos" id="filtro_periodicos">
+							<option value="">----</option>
+								
+							<option value="PAIS" {% if per == "PAIS" %} selected{% endif %}>Pais</option>
+							<option value="MUNDO" {% if per == "MUNDO" %} selected{% endif %}>Mundo</option>
+							<option value="ABC" {% if per == "ABC" %} selected{% endif %}>ABC</option>
+						</select>
+						<label>Categorias</label>
+						<select name="filtro_categoria" id="filtro_categoria" >
+							<option value="">- - - -</option>
+							{% for categ in categorias %}
+							
+								<option value="{{categ}}"  {% if categ == cat %} selected{% endif %} >{{categ}}</option>
+							
+							{% endfor %}
+						</select>
+						
+					</div>
+					
+				</form>
+			</div>
+			
+</div>

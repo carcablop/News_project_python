@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	{% block encabezado%}{% endblock %}
+	<meta charset="utf-8"/>
+	<title>Noticias</title>
+	<link rel='stylesheet' href='{{STATIC_URL}}css/base.css' type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="home">
+		<div class="header">
+			<img src="{{STATIC_URL}}img/logo_big.png" height="80"/>
+			<h1>Noticias</h1>
+			<p>Consulta las noticias de tus periodicos favoritos</p>
+			<div class="botones">
+				<a href="http://127.0.0.1:8000/login" >Iniciar sesion</a> 
+				<span>o</span>
+				<a href="http://127.0.0.1:8000/login/nuevo" >Registro</a>
+			</div>
+		</div>
+		<div class="noticias internacionales">
+		 
+		 <h2> Noticias internacionales </h2>
+		 <ul>
+		 {% for key,value in dic.items %}
+		 	<li>
+		 		<h3>{{key}}</h3>
+		 		<p>{{ value|first }}</p>
+		 		<h6>Actualizado: {{ value|last }}</h6>
+		 	</li> 
+		 
+		 {% endfor %}
+		 </ul>
+		</div>
+		
+	</div>
+
+</body>
+
+</html>
